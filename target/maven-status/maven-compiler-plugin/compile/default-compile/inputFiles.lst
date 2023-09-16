@@ -1,0 +1,9 @@
+/Users/alef.daniel/Documents/wks-spring/api-portal-occ/src/main/java/br/com/picpay/mscontacts/MsContactsApplication.java
+/Users/alef.daniel/Documents/wks-spring/api-portal-occ/src/main/java/br/com/picpay/mscontacts/DTO/PessoaDTO.java
+/Users/alef.daniel/Documents/wks-spring/api-portal-occ/src/main/java/br/com/picpay/mscontacts/repositories/ContatoRepository.java
+/Users/alef.daniel/Documents/wks-spring/api-portal-occ/src/main/java/br/com/picpay/mscontacts/config/CorsConfig.java
+/Users/alef.daniel/Documents/wks-spring/api-portal-occ/src/main/java/br/com/picpay/mscontacts/entities/Contato.java
+/Users/alef.daniel/Documents/wks-spring/api-portal-occ/src/main/java/br/com/picpay/mscontacts/config/OpenApiConfig.java
+/Users/alef.daniel/Documents/wks-spring/api-portal-occ/src/main/java/br/com/picpay/mscontacts/resources/ContatoResource.java
+/Users/alef.daniel/Documents/wks-spring/api-portal-occ/src/main/java/br/com/picpay/mscontacts/services/ContatoService.java
+/Users/alef.daniel/Documents/wks-spring/api-portal-occ/src/main/java/br/com/picpay/mscontacts/swagger/ContatoApi.java
