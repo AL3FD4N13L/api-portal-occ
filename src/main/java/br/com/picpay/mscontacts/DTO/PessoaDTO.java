@@ -2,7 +2,7 @@ package br.com.picpay.mscontacts.DTO;
 
 import java.util.List;
 
-import br.com.picpay.mscontacts.entities.Contato;
+import br.com.picpay.mscontacts.entities.Pessoa;
 import io.swagger.v3.oas.annotations.Hidden;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,5 +20,5 @@ public class PessoaDTO {
 	private String cargo;
 	private String time;
 	private String tipo_contato;
-	private List<Contato> contatos;
+	private List<Pessoa> contatos;
 }

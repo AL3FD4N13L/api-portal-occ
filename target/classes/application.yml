@@ -1,12 +1,12 @@
 spring:
   datasource:
-    url: jdbc:mysql://picpay-qa-estag-playground.cixwtib85ctv.us-east-1.rds.amazonaws.com:3306/ms_contacts
-    username: udba_alef
-    password: Lunna230617$#@!
-    driver-class-name: com.mysql.cj.jdbc.Driver # Use a classe de driver MySQL apropriada
+    url: jdbc:mysql://${PICPAY_MYSQL_URL}:${PICPAY_MYSQL_PORT}/${PICPAY_MYSQL_DB}
+    username: ${PICPAY_MYSQL_LOGIN}
+    password: ${PICPAY_MYSQL_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       dialect: org.hibernate.dialect.MySQL8Dialect
-    show-sql: true # Exibir consultas SQL no console (opcional)
-    hbm2ddl:
-      auto: update 
+      ddl-auto: update
+    show-sql: true
+  

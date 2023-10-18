@@ -2,13 +2,14 @@ package br.com.picpay.mscontacts.entities;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
-import jakarta.persistence.Table;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -17,46 +18,29 @@ import lombok.Setter;
 import lombok.ToString;
 
 
-
+@Entity
 @ToString
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-@Entity
-@Table(name="tb_contato")
-public class Contato  implements Serializable{
-
-	private static final long serialVersionUID = 1L;
+public class Contato implements Serializable{
+	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
-	private String email;
-	private String cargo;
-	private String time;
-	private String tipo_contato;
-	private String ddd_1;
-	private String telefone_principal;
-	private String ddd_2;
-	private String telefone_secundario;
 	
+	private String telefone;
 	
-	
-	@PrePersist
-    @PreUpdate
-    private void beforeSave() {
-        nome = nome.toUpperCase();
-        email = email.toUpperCase();
-        cargo= cargo.toUpperCase();
-        time = time.toUpperCase();
-        tipo_contato= tipo_contato.toUpperCase();
-        
-    }
-    
-	
-		
-	
+	@ManyToOne
+    @JoinColumn(name = "pessoa_id")
+	@JsonIgnore
+    private Pessoa pessoa;
+
+	@JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "parceiro_id")
+    private Parceiro parceiro;
 }
