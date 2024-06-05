@@ -11,7 +11,7 @@ public class CorsConfig implements WebMvcConfigurer {
 	@Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-            .allowedOrigins("http://172.16.69.211", "http://portal-occ.ppay.me/", "http://localhost:3000", "http://172.16.69.211:3000") 
+            .allowedOrigins("http://172.16.69.211", "http://portal-occ.ppay.me", "http://localhost:3000", "http://172.16.69.211:3000", "http://172.16.69.211:8082","https://172.16.69.211", "https://portal-occ.ppay.me", "https://localhost:3000", "https://172.16.69.211:3000", "https://172.16.69.211:8082")  
             .allowedMethods("GET", "POST", "PUT", "DELETE")
             .allowedHeaders("*");
   
